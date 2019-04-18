@@ -1,0 +1,206 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  <style type="text/css">
+    a          { text-decoration: none;  }
+    div.on     { display:         block; }
+    div.off    { display:         none;  }
+  </style>
+  <script type="text/javascript">
+    <!--
+    function show( item_id ) {
+      document.getElementById( 'id_' + item_id ).className = 'on';
+    }
+
+    function hide( item_id ) {
+      document.getElementById( 'id_' + item_id ).className = 'off';
+    }
+
+    function toggle( item_id ) {
+      if( document.getElementById( 'id_' + item_id ).className == 'on') {
+        hide( item_id );
+      }
+      else {
+        show( item_id );
+      }
+    }
+
+    function expand( max_id ) {
+      for( id = 1; id < max_id; ++id ) {
+        toggle( id );
+      }
+    }
+
+    -->
+  </script>
+<body style='background-color: white; background: white'>
+<h1>CLUSTER <i class='fa fa-arrow-right'></i>
+    ClusterName</h1>
+<h3> <i class='material-icons'>watch</i>Thu Apr 18 14:25:47 IST 2019</h3>
+<h3><button><a href='javascript:toggle(0)'>Cluster Info</a></button></h3><div class='off' id='id_0'>
+<script>
+function myFunction_0() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('searchBox_0');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('id_0');
+    li = ul.getElementsByTagName('div');
+    for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+
+        	}
+    	}
+	}</script>
+<input type='text' id='searchBox_0' onkeyup='myFunction_0()' placeholder='Search for names..'><br>
+<div><a href='javascript:toggle(1)' style='color: blue'><i class='fa fa-map'></i>  &nbsphelm ls --all</a><div class='off' id='id_1'><pre>
+Error: Get https://hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io:443/api/v1/namespaces/kube-system/pods?labelSelector=app%3Dhelm%2Cname%3Dtiller: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(1)'><b>COLLAPSE</b> #helm ls --all</a></button></div></div>
+<div><a href='javascript:toggle(2)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl cluster-info</a><div class='off' id='id_2'><pre>
+[0;32mKubernetes master[0m is running at [0;33mhttps://hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io:443[0m
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(2)'><b>COLLAPSE</b> #kubectl cluster-info</a></button></div></div>
+<div><a href='javascript:toggle(3)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl config current-context</a><div class='off' id='id_3'><pre>
+hacp</pre><button><a href='javascript:toggle(3)'><b>COLLAPSE</b> #kubectl config current-context</a></button></div></div>
+<div><a href='javascript:toggle(4)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get all --all-namespaces</a><div class='off' id='id_4'><pre>
+error: {batch  cronjobs} matches multiple kinds [batch/v1beta1, Kind=CronJob batch/v2alpha1, Kind=CronJob]</pre><button><a href='javascript:toggle(4)'><b>COLLAPSE</b> #kubectl get all --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(5)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get configmaps --all-namespaces</a><div class='off' id='id_5'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(5)'><b>COLLAPSE</b> #kubectl get configmaps --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(6)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get daemonset --all-namespaces</a><div class='off' id='id_6'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(6)'><b>COLLAPSE</b> #kubectl get daemonset --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(7)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get events --all-namespaces</a><div class='off' id='id_7'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(7)'><b>COLLAPSE</b> #kubectl get events --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(8)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get nodes</a><div class='off' id='id_8'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(8)'><b>COLLAPSE</b> #kubectl get nodes</a></button></div></div>
+<div><a href='javascript:toggle(9)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get persistentvolumes</a><div class='off' id='id_9'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(9)'><b>COLLAPSE</b> #kubectl get persistentvolumes</a></button></div></div>
+<div><a href='javascript:toggle(10)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get pods --all-namespaces -o wide</a><div class='off' id='id_10'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(10)'><b>COLLAPSE</b> #kubectl get pods --all-namespaces -o wide</a></button></div></div>
+<div><a href='javascript:toggle(11)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get pods -n platform</a><div class='off' id='id_11'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(11)'><b>COLLAPSE</b> #kubectl get pods -n platform</a></button></div></div>
+<div><a href='javascript:toggle(12)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get pvc --all-namespaces</a><div class='off' id='id_12'><pre>
+the server doesn't have a resource type "pvc"</pre><button><a href='javascript:toggle(12)'><b>COLLAPSE</b> #kubectl get pvc --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(13)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get replicasets --all-namespaces</a><div class='off' id='id_13'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(13)'><b>COLLAPSE</b> #kubectl get replicasets --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(14)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get statefulsets --all-namespaces</a><div class='off' id='id_14'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(14)'><b>COLLAPSE</b> #kubectl get statefulsets --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(15)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl get svc --all-namespaces</a><div class='off' id='id_15'><pre>
+the server doesn't have a resource type "svc"</pre><button><a href='javascript:toggle(15)'><b>COLLAPSE</b> #kubectl get svc --all-namespaces</a></button></div></div>
+<div><a href='javascript:toggle(16)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl top nodes</a><div class='off' id='id_16'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(16)'><b>COLLAPSE</b> #kubectl top nodes</a></button></div></div>
+<div><a href='javascript:toggle(17)' style='color: blue'><i class='fa fa-map'></i>  &nbspkubectl top pod --all-namespaces</a><div class='off' id='id_17'><pre>
+Unable to connect to the server: dial tcp: lookup hacpqthjxftqeej6dns-dd51fae2.hcp.westus2.azmk8s.io on 172.16.8.32:53: no such host</pre><button><a href='javascript:toggle(17)'><b>COLLAPSE</b> #kubectl top pod --all-namespaces</a></button></div></div>
+<br><button><a href='javascript:toggle(0)'><b>COLLAPSE</b> #Cluster Info</a></button><br></div>
+<h3><button><a href='javascript:toggle(18000)'>Pod Logs</a></button></h3><div class='off' id='id_18000'>
+<script>
+function myFunction_18000() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('searchBox_18000');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('id_18000');
+    li = ul.getElementsByTagName('div');
+    for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+
+        	}
+    	}
+	}</script>
+<input type='text' id='searchBox_18000' onkeyup='myFunction_18000()' placeholder='Search for names..'><br>
+<br>&nbsp;&nbsp; <b>Memory usage :</b>
+&nbsp;&nbsp; <i class='fa fa-battery-0'></i>Memory usage not found
+&nbsp;&nbsp; <i class='fa fa-battery-1' style='color: green'></i>Low (<500Mi)
+&nbsp;&nbsp; <i class='fa fa-battery-2' style='color: orange'></i>Medium (500-1000Mi)
+&nbsp;&nbsp; <i class='fa fa-battery-4' style='color: red'></i>High (>1000Mi) <br>
+&nbsp;&nbsp; Restarts: <i class='fa fa-undo'></i>
+&nbsp;&nbsp; CrashLoopBackOff: <i class='fa fa-refresh fa-spin fa-fw'></i><br>
+<br><button><a href='javascript:toggle(18000)'><b>COLLAPSE</b> #Pod Logs</a></button><br></div>
+<h3><button><a href='javascript:toggle(19000)'>Services</a></button></h3><div class='off' id='id_19000'>
+<script>
+function myFunction_19000() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('searchBox_19000');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('id_19000');
+    li = ul.getElementsByTagName('div');
+    for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+
+        	}
+    	}
+	}</script>
+<input type='text' id='searchBox_19000' onkeyup='myFunction_19000()' placeholder='Search for names..'><br>
+<br><button><a href='javascript:toggle(19000)'><b>COLLAPSE</b> #Services</a></button><br></div>
+<h3><button><a href='javascript:toggle(20000)'>Pod Deployment</a></button></h3><div class='off' id='id_20000'>
+<script>
+function myFunction_20000() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('searchBox_20000');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('id_20000');
+    li = ul.getElementsByTagName('div');
+    for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+
+        	}
+    	}
+	}</script>
+<input type='text' id='searchBox_20000' onkeyup='myFunction_20000()' placeholder='Search for names..'><br>
+<br><button><a href='javascript:toggle(20000)'><b>COLLAPSE</b> #Pod Deployment</a></button><br></div>
+<h3><button><a href='javascript:toggle(21000)'>Config Map Details</a></button></h3><div class='off' id='id_21000'>
+<script>
+function myFunction_21000() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('searchBox_21000');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('id_21000');
+    li = ul.getElementsByTagName('div');
+    for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+
+        	}
+    	}
+	}</script>
+<input type='text' id='searchBox_21000' onkeyup='myFunction_21000()' placeholder='Search for names..'><br>
+<br><button><a href='javascript:toggle(21000)'><b>COLLAPSE</b> #Config Map Details</a></button><br></div>
+<h3><button><a href='javascript:toggle(22000)'>Secret Details</a></button></h3><div class='off' id='id_22000'>
+<script>
+function myFunction_22000() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('searchBox_22000');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('id_22000');
+    li = ul.getElementsByTagName('div');
+    for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+
+        	}
+    	}
+	}</script>
+<input type='text' id='searchBox_22000' onkeyup='myFunction_22000()' placeholder='Search for names..'><br>
+<br><button><a href='javascript:toggle(22000)'><b>COLLAPSE</b> #Secret Details</a></button><br></div>
+</body></html>
+<h3><i class='fa fa-balance-scale'></i>Ingress IP : <a target='_blank' href='https://null' style='color:hotpink' >null</a></h3>
